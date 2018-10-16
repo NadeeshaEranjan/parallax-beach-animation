@@ -1,0 +1,301 @@
+html,body{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	margin : 0px;
+	/*margin-left: -10%;*/
+	/*margin-top: -5%;*/
+	/*width: 120%;*/
+	/*overflow: hidden;*/
+	background: #46a1e2; /* Old browsers */
+background: -moz-linear-gradient(top, #46a1e2 0%, #9adcec 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #46a1e2 0%,#9adcec 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #46a1e2 0%,#9adcec 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+@keyframes wave-1 {
+	100% {
+		transform: translate(50%, 0);
+	}
+}
+@keyframes wave-2 {
+	100% {
+		transform: translate(-50%, 0);
+	}
+}
+@keyframes wave-3 {
+	100% {
+		transform: translate(50%, 0);
+	}
+}
+@keyframes wave-fill {
+	100% {
+		top: -120px;
+	}
+}
+
+@keyframes waveRotate1 {
+	from { transform: rotate(0deg) translateX(20px) rotate(0deg); }
+	to   { transform: rotate(360deg) translateX(20px) rotate(-360deg); }
+}
+
+@keyframes waveRotate2 {
+	from { transform: rotate(0deg) translateX(15px) rotate(0deg); }
+	to   { transform: rotate(360deg) translateX(15px) rotate(-360deg); }
+}
+
+@keyframes waveRotate3 {
+	from { transform: rotate(0deg) translateX(10px) rotate(0deg); }
+	to   { transform: rotate(360deg) translateX(10px) rotate(-360deg); }
+}
+
+#landing-content {
+	overflow: hidden;
+	/* background-image: url(img/clouds_trans.png); */
+	width: 120%;
+	margin-left: -10%;
+	margin-top: -5%;
+	height: 400px;
+	background-size: 120% 120%;
+	background-position: 25% 25%;
+	background-repeat: no-repeat;
+	border-bottom: solid;
+	/* border-bottom-color: #628027; */
+	border-bottom-width: 5px;
+	position: fixed;
+	z-index: -1;
+}
+
+#background {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100% !important;
+	background-image: url('img/clouds_trans1.png');
+	background-repeat: no-repeat;
+	background-size: 75%;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0.6;
+}
+
+#foreground {
+	background-image: url('img/clouds_trans2.png');
+	background-repeat: no-repeat;
+	background-size: 86%;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100% !important;
+	left: 0%;
+	opacity: 0.3;
+}
+#fore-foreground {
+	background-image: url('2.png');
+	z-index: 2;
+}
+
+#fore-fore-foreground {
+}
+
+.footer-water{
+	display: block;
+	position: fixed;
+	z-index: 99999999999999999999999999;
+	width: 100%;
+	height: 100%;
+	/* background: #1b1b1b; */
+	top: 0;
+	left: 0;
+}
+
+.footer-water .box .water_wave_back1 .image-container{
+	background-image: url('img/wave_back1.png');
+	animation: wave-3 12.4s infinite linear;
+}
+
+.footer-water .box .water_wave_back2 .image-container{
+	background-image: url('img/wave_back2.png');
+	animation: wave-2 12.4s infinite linear;
+}
+
+.footer-water .box .water_wave_back3 .image-container{
+	background-image: url('img/wave_back3.png');
+	animation: wave-3 12.4s infinite linear;
+}
+
+.footer-water .box .water_wave_middle1 .image-container{
+	background-image: url('img/wave_middle1.png');
+	animation: wave-2 9.7s infinite linear;
+}
+
+.footer-water .box .water_wave_middle2 .image-container{
+	background-image: url('img/wave_middle2.png');
+	animation: wave-3 9.7s infinite linear;
+}
+
+.footer-water .box .water_wave_middle3 .image-container{
+	background-image: url('img/wave_middle3.png');
+	animation: wave-2 9.7s infinite linear;
+}
+
+.footer-water .box .water_wave_front1 .image-container{
+	background-image: url('img/wave_front1.png');
+	animation: wave-1 5.7s infinite linear;
+}
+
+.footer-water .box .water_wave_front2 .image-container{
+	background-image: url('img/wave_front2.png');
+	animation: wave-2 5.7s infinite linear;
+}
+
+.footer-water .box .water_wave_front3 .image-container{
+	background-image: url('img/wave_front3.png');
+	animation: wave-1 5.7s infinite linear;
+}
+
+.footer-water .box {
+	height: 118px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	/* transform: translate(-50%, -50%); */
+	/* background: #1b1b1b; */
+	/* border-radius: 100%; */
+	/* overflow: hidden; */
+	/* right: 0; */
+	bottom: 0;
+}
+/* line 35, sass/loading.scss */
+.footer-water .box #logo {
+	z-index: 10;
+	position: relative;
+}
+/* line 39, sass/loading.scss */
+.footer-water .box .percent {
+	visibility: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 3;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 30px;
+}
+/* line 54, sass/loading.scss */
+.footer-water .box .water {
+	position: absolute;
+	left: 0;
+	top: 0px;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	transform: translate(0, 100%);
+	background: #2bd3f4;
+	/* animation: wave-fill 5s infinite linear; */
+}
+
+.footer-water .box .water_wave {
+	width: 235%;
+	position: absolute;
+	bottom: 100%;
+	height: 25px;
+	background-size: contain;
+	box-shadow: 0px -3px 23px 5px #111;
+}
+
+.footer-water .box .water_wave .image-container{
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+	position: absolute;
+	bottom: 24px;
+}
+
+.footer-water .box .water_wave_back1 {
+	right: -20px;
+	margin-bottom: 40px;
+	-webkit-animation: waveRotate3 4s linear infinite;
+	-moz-animation: waveRotate3 4s linear infinite;
+	animation: waveRotate3 4s linear infinite;
+	background: #0f374b;
+}
+
+.footer-water .box .water_wave_back2 {
+	left: -20px;
+	margin-bottom: 30px;
+	-webkit-animation: waveRotate3 4s linear infinite;
+	-moz-animation: waveRotate3 4s linear infinite;
+	animation: waveRotate3 4s linear infinite;
+	background: #004a6e;
+}
+
+.footer-water .box .water_wave_back3 {
+	right: -20px;
+	margin-bottom: 20px;
+	-webkit-animation: waveRotate3 4s linear infinite;
+	-moz-animation: waveRotate3 4s linear infinite;
+	animation: waveRotate3 4s linear infinite;
+	background: #005984;
+}
+
+.footer-water .box .water_wave_middle1 {
+	left: -18px;
+	margin-bottom: 20px;
+	-webkit-animation: waveRotate2 4s linear infinite;
+	-moz-animation: waveRotate2 4s linear infinite;
+	animation: waveRotate2 4s linear infinite;
+	background: #126a94;
+}
+
+.footer-water .box .water_wave_middle2 {
+	right: -18px;
+	margin-bottom: 10px;
+	-webkit-animation: waveRotate2 4s linear infinite;
+	-moz-animation: waveRotate2 4s linear infinite;
+	animation: waveRotate2 4s linear infinite;
+	background: #0077b0;
+}
+
+.footer-water .box .water_wave_middle3 {
+	left: -18px;
+	margin-bottom: 0px;
+	-webkit-animation: waveRotate2 4s linear infinite;
+	-moz-animation: waveRotate2 4s linear infinite;
+	animation: waveRotate2 4s linear infinite;
+	background: #0a8ccb;
+}
+
+.footer-water .box .water_wave_front1 {
+	right: -10px;
+	margin-bottom: -0px;
+	-webkit-animation: waveRotate1 4s linear infinite;
+	-moz-animation: waveRotate1 4s linear infinite;
+	animation: waveRotate1 4s linear infinite;
+	background: #209dda;
+}
+
+.footer-water .box .water_wave_front2 {
+	left: -10px;
+	margin-bottom: -10px;
+	-webkit-animation: waveRotate2 4s linear infinite;
+	-moz-animation: waveRotate2 4s linear infinite;
+	animation: waveRotate2 4s linear infinite;
+	background: #4cb2e4;
+}
+
+.footer-water .box .water_wave_front3 {
+	right: -10px;
+	margin-bottom: -20px;
+	-webkit-animation: waveRotate3 4s linear infinite;
+	-moz-animation: waveRotate3 4s linear infinite;
+	animation: waveRotate3 4s linear infinite;
+	background: #6ac4f0;
+}
